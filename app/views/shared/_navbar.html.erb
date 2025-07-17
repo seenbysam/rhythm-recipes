@@ -1,26 +1,22 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-
     <%= link_to matches_path(reset: true), class: "navbar-brand" do %>
       <%= image_tag "logo.png", alt: "App Logo" %>
     <% end %>
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-
           <li class="nav-item dropdown">
             <a class="hamburger" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="3">
-              <path d="M2 8h28M2 16h28M2 24h28"/>
-             </svg>
-  <span class="visually-hidden">Menu</span>
-</a>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="3">
+                <path d="M2 8h28M2 16h28M2 24h28"/>
+              </svg>
+              <span class="visually-hidden">Menu</span>
+            </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Saved Combos", about_user_path(current_user), class: "dropdown-item" %>
               <%= link_to "Start over", matches_path(reset: true), class: "dropdown-item" %>

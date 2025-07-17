@@ -6,7 +6,8 @@
       <h3>Tailored recipes and soundtracks — just tell us what you're craving.</h3>
       <div>
         <a href="<%= new_user_session_path %>" class="button-home me-5">Log In</a>
-        <a href="<%= new_user_registration_path %>" class="button-home ms-5">Sign Up</a>
+        <!--<a href="<%= new_user_registration_path %>" class="button-home ms-5">Sign Up</a>-->
+        <%= link_to 'Continue as Guest', guest_login_path, data: {turbo_method: :post }, class: 'button-home ms-5' %>
       </div>
     </div>
   </div>

@@ -1,5 +1,6 @@
 <div class="container full-height-with-footer">
   <div class="card-container mt-5 mb-3">
+    <% if @user.matches.find_by(saved: !nil) %>
     <h1 class="text-center mb-5 text-dark">Hi <%= @user.first_name %>, these are your saved combos!</h1>
     <div class="saved-recipe-container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 saved-recipe-list">
@@ -21,6 +22,9 @@
               </div>
             <% end %>
           <% end %>
+        <% end %>
+        <% else %>
+        <h1 class="text-center mb-5 text-dark">Hi <%= @user.first_name %>, you have no saved matches, yet.</h1>
         <% end %>
       </div>
     </div>

@@ -50,13 +50,17 @@ h2 {
   color: white;
 }
 
-
-
 .option-label {
-  font-size: 24px;
-  font-weight: 400;
-  color: $gray;
-}
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+      width: 100%;
+      font-size: 18px;
+      font-weight: 450;
+      text-align: center;
+      align-items: center;
+      z-index: 2;
+    }
 
 .sm {
   height: 40px;
@@ -247,22 +251,6 @@ $n3: 15;
 .form-content .text-center.my-5 {
   margin-bottom: 0 !important;
   margin-top: 4px !important;
-}
-
-.genre-preview {
-  .genre-chip {
-    font-size: 0.95rem;
-    background-color: #ffeb3b;
-    color: #222;
-    border-radius: 20px;
-    padding: 0.4em 0.8em;
-    display: flex;
-    align-items: center;
-  }
-
-  img {
-    margin-right: 6px;
-  }
 }
 
 .modal-content {

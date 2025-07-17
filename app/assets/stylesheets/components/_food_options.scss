@@ -63,9 +63,10 @@
       font-size: 15px;
       font-weight: 450;
       text-align: center;
+      align-items: center;
       z-index: 2;
     }
-
+    
     &:hover .option-label {
       opacity: 1;
     }
@@ -84,23 +85,15 @@
 
 .option-card.vegan:hover,
 .option-card.vegan:has(.hidden-radio:checked) {
-  aspect-ratio: 1.009;
-  border-radius: 0;
-  clip-path: shape(
-    from 67.79% 25.02%,
-    curve to 99.41% 61.34% with 80.78% 37.01%/96.34% 47.62%,
-    curve to 80.01% 97.48% with 102.49% 75.05%/93.09% 91.87%,
-    curve to 35.14% 96.27% with 67.02% 103.17%/50.35% 97.65%,
-    curve to 1.72% 91.7% with 19.93% 94.8%/6.08% 97.39%,
-    curve to 4.46% 60.3% with -2.64% 86.09%/2.41% 72.12%,
-    curve to 9.93% 26.66% with 6.51% 48.4%/5.57% 38.65%,
-    curve to 34.12% 0.01% with 14.29% 14.67%/23.94% 0.44%,
-    curve to 67.79% 25.02% with 44.2% -0.42%/54.71% 13.03%,
-    close
-  );
-  background: #98CC60;
-  transform: scale(1.05);
-  border: 0;
+  border-radius: 0%;
+  --r: 10px; /* radius of circles */
+  aspect-ratio: 1 ;
+  background-color: $orange;
+  mask:
+    linear-gradient(#000 0 0) no-repeat
+     50%/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)),
+    radial-gradient(farthest-side,#000 97%,#0000)
+     0 0/calc(2*var(--r)) calc(2*var(--r)) round;
 }
 
 
@@ -113,23 +106,15 @@
 
 .option-card.meat:hover,
 .option-card.meat:has(.hidden-radio:checked) {
-  aspect-ratio: 1.334;
-  border-radius: 0;
-  clip-path: shape(
-    from 75.55% 11.29%,
-    curve to 99.65% 46.74% with 85.89% 19.89%/97.55% 31.92%,
-    curve to 83.94% 89.14% with 101.74% 61.56%/94.28% 79.19%,
-    curve to 48.73% 99.3% with 73.61% 99.09%/60.39% 101.37%,
-    curve to 17.1% 80.64% with 37.15% 97.12%/27.12% 90.59%,
-    curve to 0.77% 48.81% with 7.07% 70.69%/-2.88% 57.31%,
-    curve to 31.63% 27.87% with 4.35% 40.31%/21.68% 36.58%,
-    curve to 50.29% 1.44% with 41.66% 19.27%/44.46% 5.59%,
-    curve to 75.55% 11.29% with 56.19% -2.71%/65.21% 2.58%,
-    close
-  );
-  background: #e9c228;
-  transform: scale(1.05);
-  border: 0;
+  border-radius: 0%;
+  --r: 25px; /* radius of circles */
+  aspect-ratio: 1 ;
+  background-color: $orange;
+  mask:
+    linear-gradient(#000 0 0) no-repeat
+     50%/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)),
+    radial-gradient(farthest-side,#000 97%,#0000)
+     0 0/calc(2*var(--r)) calc(2*var(--r)) round;
 }
 
  // Vegetarian
@@ -141,27 +126,15 @@
 
 .option-card.vegetarian:hover,
 .option-card.vegetarian:has(.hidden-radio:checked) {
-  aspect-ratio: 1.117;
-  border-radius: 0;
-  clip-path: shape(
-    from 69.26% 15.16%,
-    curve to 86.02% 34.51% with 75.08% 22%/79.84% 27.87%,
-    curve to 100% 56.2% with 92.27% 41.21%/99.94% 48.67%,
-    curve to 86.46% 78.59% with 100% 63.73%/92.33% 71.26%,
-    curve to 70.68% 96.76% with 80.58% 85.91%/76.5% 93.09%,
-    curve to 50.15% 99.52% with 64.87% 100.35%/57.26% 100.42%,
-    curve to 29.19% 93.92% with 43.04% 98.62%/36.36% 96.69%,
-    curve to 9.33% 81.07% with 22.07% 91.16%/14.4% 87.5%,
-    curve to 0.67% 55.44% with 4.32% 74.65%/1.91% 65.46%,
-    curve to 4.01% 27.32% with -0.5% 45.42%/-0.56% 34.58%,
-    curve to 26.28% 11.22% with 8.65% 20.07%/17.87% 16.34%,
-    curve to 49.35% 0.03% with 34.63% 6.04%/42.17% -0.52%,
-    curve to 69.26% 15.16% with 56.58% 0.59%/63.45% 8.39%,
-    close
-  );
-  background: #f09423;
-  transform: scale(1.10);
-  border: 0;
+border-radius: 0%;
+  --r: 20px; /* radius of circles */
+  aspect-ratio: 1 ;
+  background-color: $orange;
+  mask:
+    linear-gradient(#000 0 0) no-repeat
+     50%/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)),
+    radial-gradient(farthest-side,#000 97%,#0000)
+     0 0/calc(2*var(--r)) calc(2*var(--r)) round;
 }
 
 // Seafood
@@ -173,25 +146,15 @@
 
 .option-card.seafood:hover,
 .option-card.seafood:has(.hidden-radio:checked) {
-  aspect-ratio: 0.978;
-  border-radius: 0;
-  clip-path: shape(
-    from 83.1% 5.09%,
-    curve to 99.13% 31.73% with 91.76% 10.67%/97.21% 21.2%,
-    curve to 95.28% 61.44% with 101.12% 42.32%/99.64% 52.86%,
-    curve to 75.92% 83.88% with 90.99% 70.09%/83.87% 76.74%,
-    curve to 49.64% 99.8% with 68.04% 90.97%/59.32% 98.49%,
-    curve to 21.89% 88.9% with 39.96% 101.06%/29.32% 96.17%,
-    curve to 5.99% 61.94% with 14.39% 81.63%/10.09% 72.1%,
-    curve to 1.24% 33.05% with 1.89% 51.79%/-2.09% 41.07%,
-    curve to 24.39% 14.37% with 4.51% 25.02%/14.96% 19.7%,
-    curve to 52.4% 1.33% with 33.81% 9.04%/42.21% 3.71%,
-    curve to 83.1% 5.09% with 62.53% -1.05%/74.45% -0.49%,
-    close
-  );
-  background: #91b9e2;
-  transform: scale(1.10);
-  border: 0;
+  border-radius: 0%;
+  --r: 30px; /* radius of circles */
+  aspect-ratio: 1 ;
+  background-color: $orange;
+  mask:
+    linear-gradient(#000 0 0) no-repeat
+     50%/calc(100% - 2*var(--r)) calc(100% - 2*var(--r)),
+    radial-gradient(farthest-side,#000 97%,#0000)
+     0 0/calc(2*var(--r)) calc(2*var(--r)) round;
 }
 
   // Shuffle
@@ -201,10 +164,16 @@
   }
   .option-card.shuffle:hover,
   .option-card.shuffle:has(.hidden-radio:checked) {
-    mask: radial-gradient(40px at 40px 40px, #0000 98%, #000) -40px -40px;
-    background: #bb97d2;
-    border-radius: 0;
-    transform: scale(1.10);
+  border-radius: 0;
+  aspect-ratio: 1;
+  --o:calc(50%*tan(-22.5deg));
+  clip-path: polygon(
+    var(--o) 50%,
+    50% var(--o),
+    calc(100% - var(--o)) 50%,
+    50% calc(100% - var(--o))
+  );
+  background: $orange;
   }
 
   // Hidden input

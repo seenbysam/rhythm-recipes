@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 
+
   devise_for :users
 
-  authenticate :user, ->(u) { u.admin? } do
-    mount MissionControl::Jobs::Engine, at: "/jobs"
-  end
+  post 'guest_login', to: 'sessions#guest', as: :guest_login
 
   root to: "pages#home"
 

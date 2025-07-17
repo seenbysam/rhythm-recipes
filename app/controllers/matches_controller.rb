@@ -16,7 +16,7 @@ class MatchesController < ApplicationController
     @recipe = Recipe.find(params[:recipe_id]) # or session[:match_data]["selected_recipe_id"]
 
     @match = Match.new(
-      user: current_user,
+      user: User.last,
       music_suggestion: @music,
       recipe: @recipe,
       recipe_name: @recipe.name,
